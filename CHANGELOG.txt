@@ -1,0 +1,128 @@
+
+==========================================================================================
+Version 2.9 13Oct2026:
+
+Requested items:
+1. Version Update: Bumped to v2.9 in meta comments, header badge, cache version (joybridge-cache-v2.9), and cache manifest.
+
+2. Dedicated Invitation Video Card: The Invitation Video is now decoupled from the bottom action row and rendered in its own card right above "I am happy to see you in San Diego" in the Ministry Skills section across all languages (retaining the exact same link).
+
+3. Fixed English Audio Listen (EN): Unescaped inner quotation marks inside item.en ("2026 Eternal Happiness") were previously breaking the onclick="speakText('...')" inline attribute by terminating JavaScript string literals prematurely. The string escaping logic has been hardened with a dedicated safeSpeak() handler that cleans both single and double quotes seamlessly.
+
+4. Complete Phonetic Transcriptions: Added full-sentence chosen language phonetics (phNative) for the entire English invitation sentence across all 10 languages, rather than truncating with ellipses.
+
+==========================================================================================
+Version 2.8.3 09Oct2026:
+
+What Was Updated:
+1. Targeted Invitation Link Added: In renderPhrases(), when the phrase matches the convention invitation (item.en.startsWith("I am here to invite you")), an anchor link styled like the action buttons is placed to the left of the Listen button in both Native and English modes.
+
+2. Button Layout: The card action footer uses justify-between items-center with wrapping enabled so both buttons display cleanly side-by-side on mobile and desktop without crowding.
+
+3. PWA & Cache Bump: Updated the comment, cache key (joybridge-cache-v2.8.3), and on-screen version indicators to v2.8.3.
+
+==========================================================================================
+Version 2.8.2.4 09Oct2026:
+
+Summary of corrections:
+1. JW.ORG Convention Program Card correction: Make the word "PROGRAM" in all languages White color font.
+
+
+==========================================================================================
+Version 2.8.2.3 08Oct2026:
+
+Summary of corrections:
+1. JW.ORG Convention Program Card correction:
+ A) The words "2026 CONVENTION OF JEHOVAH'S WITNESSES" must stay on one line only. Change font to adjust. It’s currently showing “WITNESSES” on it’s own line below this.
+ B) Correct the color of the words at bottom to WHITE “PROGRAM”
+
+
+==========================================================================================
+Version 2.8.2.2 – 08 Oct 2026:
+
+Summary of Updates:
+1. Version Update: Bumped version indicators, comments, and the cache key to v2.8.2.2 to correct previous wrong version of 2.82.1.
+
+==========================================================================================
+Version 2.8.2.1 – 08 Oct 2026:
+
+Summary of Updates:
+1. Version Update: Bumped version indicators, comments, and the cache key to v2.82.1.
+2. JW.ORG Card Icon Restored: Re-instated the original classic purple/indigo square "JW" logo badge in the upper-left of the card.
+3. Full-Width Dynamic Program Booklet Canvas:
+	A) Swapped the graphic image source to ./co-pgm26_BLANK_lg.jpg loaded from root.
+	B) Positioned the booklet prominently below the card description text spanning the full width of the card.
+	C) Scaled the text and lines proportionally so the localized text (ETERNAL, HAPPINESS, convention title, and PROGRAM) is large, crisp, and easily legible.
+	D) Retained the language-specific links pointing to the official convention program pages on JW.ORG.
+4. Updated Card Copy: Updated description text to:“Access the convention daily programs, convention releases, music and spiritual encouragement in hundreds of languages”.
+
+==========================================================================================
+Version 2.82 – 08 Oct 2026:
+
+Key Updates Made:
+1. Version Update: Bumped application to v2.82 across header comments, cache key, and bottom status indicator.
+
+2. WhatsApp QR Code Caption: Changed wording to:Click <i><b>here</b></i> (or Scan QR) to Join Group.
+
+3. Greetings Welcome Message: Restored extend our so the greeting opens with:“We open our hearts and extend our arms in warm Christian love as we welcome you to the “2026 Eternal Happiness” International Convention...” across all 16 languages.
+
+4. JW.ORG Convention Program Card Redesign:
+	A) Swapped in co-pgm26_E_lg.jpg loaded from root (./co-pgm26_E_lg.jpg).
+	B) Built a dynamic overlay canvas structured exactly according to your layout requirements:
+		i) Line 1 (Top, above dividing line): "ETERNAL" (or native translation), centered, 80% width, wide tracking, color #173631.
+		ii) Line 2 (Top, below Line 1, above dividing line): "HAPPINESS" (or native translation), centered, 80% width, wide tracking, color #173631.
+		iii) Dividing Line: Sized dynamically in the composition.
+		iv) Line 3 (Top, below dividing line): "2026 CONVENTION OF JEHOVAH'S WITNESSES", centered, matching width of the line, Calibri Bold (or script equivalent), color #173631.
+		v) Line 4 (Bottom): "PROGRAM" (or native translation), centered, matching size of Line 3, Calibri Bold (or script equivalent), color #000000.
+		vi) Uses native, clear typography for Non-Roman scripts (Arabic, Chinese, Kannada, Korean, Persian, Russian).
+
+5. Changed the JW.ORG card title color to hex #453BC8.
+
+==========================================================================================
+Version 2.81 08 Oct 2026 incorporating all requested changes:
+1. Version Update: Bumped to v2.81 in the header indicator, comments, and cache key.
+2. WhatsApp QR Code Caption: Changed to Click <i><b>here</b></i> or Scan QR to Join Group.
+3. "Open in Maps" Overlay: Centered in the photo container (both vertically and horizontally) and doubled in size (100% enlargement with larger icon, padding, and text).
+
+==========================================================================================
+Version 2.8 – 08 Oct 2026:
+Key Changes Made:
+1. Bigger Font Sizes for Small Mobile Displays:
+	A) Boosted base typography across headings, descriptions, badges, card text, buttons, and navigation controls (e.g., body text from text-xs/text-sm up to text-sm/text-base, headings and titles bumped proportionally) to ensure readability on smaller phone viewports.
+2. WhatsApp Support Group Card:
+     	A) Added the localized 3-line text block right below the WhatsApp logo and above the QR code / support section:
+		Line 1: NW JoyBridge App
+		Line 2: Support for Delegates
+		Line 3: WhatsApp Group
+	B) Styled with explicit RGB color rgb(70, 60, 199) (#463cc7), centered, bold, and dynamic per selected language.
+	C) Included a centered QR code element pointing directly to the invite link.
+3) Updated WhatsApp Group Link:
+	a) Changed target link to [https://chat.whatsapp.com/HKDpPyi2kEJFnMIqE3hzaE?mode=gi_t](https://chat.whatsapp.com/HKDpPyi2kEJFnMIqE3hzaE?mode=gi_t).
+4) Dynamic JW Programs Logo by Language:
+	A) Replaced the static square box with a responsive image element sourcing dynamically from ./programmes/{language}.jpg (e.g., ./programmes/english.jpg, ./programmes/spanish.jpg, etc.) based on the active language.
+	B) Retained the established language-specific JW.ORG 2026 convention program links.
+
+
+==========================================================================================
+Version 2.6 07Oct2026:
+Summary of Changes:
+1 Header Line 1 Updated: Changed Line 1 from "2026 Eternal Happiness" to "NW JoyBridge" across the application and greeting translation dictionaries
+2 Video Black Box / Poster Fix:
+	* Added preload="none" (preventing mobile and desktop web engines from preloading video frames that paint over the poster with a black rectangle before play).
+	* Removed native <source> nesting and defined src="VIDEO_SanDiegoConventionPrep.mp4" directly on <video poster="VideoPoster.jpg"> so mobile WebKit/Blink and Safari render the poster image reliably.
+	* Wrapped the container with relative and a fallback background image style matching VideoPoster.jpg.
+3 Two-Line Welcome Header: Split the standalone welcome word into two separate, impactful lines:
+	* Line 1: "WELCOME TO"
+	* Line 2: "SAN DIEGO!" (with localized equivalents across all 16 languages).
+4 Venue Subtitle Date Moved to Next Line: In the Convention Venue card header, moved "Nov 27–29, 2026" onto its own line directly below "San Diego Convention Center" using a <br> break.
+5 Welcome Message Phrasing Updated: Updated the welcome body text in all languages to read: “We open our hearts and extend our arms in warm Christian love as we welcome you to the “2026 Eternal Happiness” International Convention...”
+
+==========================================================================================
+Version 2.5 07Oct2026 CH: 
+Summary of Changes Implemented:
+1 Welcome Scripture Added: Included Matthew 13:16 — “Happy are your eyes because they see and your ears because they hear.” prominently styled below the welcome message in the selected language.
+2 Header Redesigned:
+	* Removed the logo icon and box.
+	* Converted title into 2 localized lines: Line 1: 2026 Eternal Happiness, Line 2: Convention Language Helper, updating dynamically when language is changed.
+3 Video Poster: Retained and confirmed poster="VideoPoster.jpg" on the <video> tag so it shows the thumbnail image immediately without video trimming.
+4 Emoji Alignment for RTL Languages (Arabic & Persian): Wrapped and prepended &#x200E;
